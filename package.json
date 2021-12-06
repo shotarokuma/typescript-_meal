@@ -1,0 +1,26 @@
+{
+  "name": "a03typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "node build/main.js",
+    "dev": "npm run watch",
+    "build": "tsc",
+    "clean": "rimraf build",
+    "rebuild": "npm run build",
+    "prerebuild": "npm run clean",
+    "watch": "nodemon --watch \"src/**/*.ts\" --exec \"node\" --inspect -r ts-node/register \"src/main.ts\"",
+    "prewatch": "npm run clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.17.44",
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}
